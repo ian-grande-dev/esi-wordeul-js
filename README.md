@@ -116,4 +116,6 @@ School project built at **HE2B - ESI** (Brussels) to practise DOM manipulation, 
 
 ## Author
 
-**Ian Grande** - [GitHub](https://github.com/ian-grande-dev) · [LinkedIn](https://www.linkedin.com/in/ian-grande/)
+**Ian** - Student in Application Development at HE2B-ESI, Brussels
+
+[GitHub](https://github.com/ian-grande-dev) · [LinkedIn](https://www.linkedin.com/in/ian-grande/) · [Email](mailto:ian.grande.pro@gmail.com)
