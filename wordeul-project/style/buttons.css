@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.625rem 1.125rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--border-strong);
+    outline-offset: 2px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: progress;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--accent-contrast);
+}
+
+.btn-primary:hover:not(:disabled) {
+    opacity: 0.85;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+    background: var(--key);
+}
+
+.btn-ghost {
+    padding: 0.375rem 0.75rem;
+    background: transparent;
+    color: var(--muted);
+    font-size: 0.85rem;
+}
+
+.btn-ghost:hover {
+    color: var(--text);
+    background: var(--key);
+}

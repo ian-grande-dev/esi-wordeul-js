@@ -1,0 +1,49 @@
+/* ==========================================================================
+   End-of-game dialog (native <dialog> element)
+   ========================================================================== */
+
+.dialog {
+    width: min(22rem, calc(100vw - 2rem));
+    padding: 1.75rem;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) * 2);
+    box-shadow: 0 24px 48px rgb(0 0 0 / 0.2);
+    text-align: center;
+}
+
+.dialog::backdrop {
+    background: rgb(0 0 0 / 0.5);
+    backdrop-filter: blur(4px);
+}
+
+.dialog[open] {
+    animation: dialog-in 0.2s ease-out;
+}
+
+@keyframes dialog-in {
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem) scale(0.98);
+    }
+}
+
+.dialog h2 {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+}
+
+.dialog p {
+    margin: 0 0 1.5rem;
+    color: var(--muted);
+}
+
+.dialog strong {
+    color: var(--text);
+    letter-spacing: 0.08em;
+}
+
+.dialog .actions {
+    justify-content: center;
+}

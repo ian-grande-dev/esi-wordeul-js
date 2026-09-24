@@ -1,0 +1,13 @@
+{
+  "name": "wordeul",
+  "version": "1.0.0",
+  "description": "A Wordle-style word guessing game built with vanilla HTML, CSS and JavaScript.",
+  "private": true,
+  "author": "Ian Grande",
+  "scripts": {
+    "lint": "eslint js"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
+}

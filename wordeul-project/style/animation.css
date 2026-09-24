@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+:root {
+    --reveal-step: 250ms; /* delay between two tiles when a row is revealed */
+    --flip-duration: 500ms;
+}
+
+/* Small "pop" when a letter is typed */
+@keyframes pop {
+    50% { transform: scale(1.08); }
+}
+
+.tile[data-state="filled"] {
+    animation: pop 0.12s ease-out;
+}
+
+/* Tiles flip one after another when a guess is validated */
+@keyframes flip {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0); }
+}
+
+.tile[data-state="correct"],
+.tile[data-state="present"],
+.tile[data-state="absent"] {
+    animation: flip var(--flip-duration) ease-in-out both;
+    animation-delay: calc(var(--i, 0) * var(--reveal-step));
+}
+
+/* Row shakes when the guess is rejected */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-6px); }
+    40%, 80% { transform: translateX(6px); }
+}
+
+.row.shaking {
+    animation: shake 0.35s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --reveal-step: 0ms;
+        --flip-duration: 0ms;
+    }
+
+    .tile[data-state],
+    .row.shaking {
+        animation: none;
+    }
+}

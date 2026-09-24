@@ -1,0 +1,31 @@
+/* ==========================================================================
+   Letter states (board tiles, keyboard keys and legend swatches)
+   ========================================================================== */
+
+.tile[data-state="filled"] {
+    border-color: var(--border-strong);
+}
+
+/* Colour change is delayed so it happens halfway through the flip animation. */
+.tile[data-state="correct"],
+.tile[data-state="present"],
+.tile[data-state="absent"] {
+    color: #ffffff;
+    transition: background-color 0s, border-color 0s;
+    transition-delay: calc(var(--i, 0) * var(--reveal-step) + var(--flip-duration) / 2);
+}
+
+[data-state="correct"] {
+    background-color: var(--correct);
+    border-color: var(--correct);
+}
+
+[data-state="present"] {
+    background-color: var(--present);
+    border-color: var(--present);
+}
+
+[data-state="absent"] {
+    background-color: var(--absent);
+    border-color: var(--absent);
+}
